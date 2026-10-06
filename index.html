@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DriveEasy - Car Booking System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-car"></i>
+        Drive<span>Easy</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#cars">Available Cars</a>
+        <a href="#bookings">My Bookings</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="login-btn" onclick="openLogin()">
+        Login
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Book Your Dream Car</h1>
+
+        <p>
+            Explore. Drive. Experience.
+        </p>
+
+        <div class="features">
+
+            <div>
+                <i class="fa-solid fa-shield-halved"></i>
+                Safe & Secure
+            </div>
+
+            <div>
+                <i class="fa-solid fa-clock"></i>
+                24/7 Support
+            </div>
+
+            <div>
+                <i class="fa-solid fa-star"></i>
+                Best Prices
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SEARCH BOX -->
+
+    <div class="search-box">
+
+        <div class="input-group">
+
+            <label>
+                <i class="fa-solid fa-location-dot"></i>
+                Pick-up Location
+            </label>
+
+            <input
+                type="text"
+                id="pickupLocation"
+                placeholder="Enter city or airport">
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                <i class="fa-solid fa-location-dot"></i>
+                Drop-off Location
+            </label>
+
+            <input
+                type="text"
+                id="dropLocation"
+                placeholder="Enter city or airport">
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                <i class="fa-solid fa-calendar"></i>
+                Pick-up Date
+            </label>
+
+            <input type="date" id="pickupDate">
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                <i class="fa-solid fa-calendar"></i>
+                Drop-off Date
+            </label>
+
+            <input type="date" id="dropDate">
+
+        </div>
+
+
+        <button class="search-btn" onclick="searchCars()">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Search Cars
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CARS ================= -->
+
+<section class="cars-section" id="cars">
+
+    <div class="section-title">
+
+        <h2>Available Cars</h2>
+
+        <p>
+            Choose from our wide range of vehicles
+        </p>
+
+    </div>
+
+
+    <div class="cars-container">
+
+
+        <!-- CAR 1 -->
+
+        <div class="car-card">
+
+            <img src="images/car1.jpg" alt="Fortuner">
+
+            <div class="car-info">
+
+                <h3>Fortuner</h3>
+
+                <p class="car-type">
+                    <i class="fa-solid fa-car"></i>
+                    Sedan
+                </p>
+
+                <div class="details">
+
+                    <span>
+                        <i class="fa-solid fa-users"></i>
+                        5 Seats
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-gears"></i>
+                        Automatic
+                    </span>
+
+                </div>
+
+                <div class="price">
+                    ₹2,500 <small>/ day</small>
+                </div>
+
+                <button
+                    class="book-btn"
+                    onclick="openBooking('Fortuner',2500)">
+
+                    Book Now
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAR 2 -->
+
+        <div class="car-card">
+
+            <img src="images/car2.jpg" alt="Hyundai Creta">
+
+            <div class="car-info">
+
+                <h3>Hyundai Creta</h3>
+
+                <p class="car-type">
+                    <i class="fa-solid fa-car-side"></i>
+                    SUV
+                </p>
+
+                <div class="details">
+
+                    <span>
+                        <i class="fa-solid fa-users"></i>
+                        5 Seats
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-gears"></i>
+                        Automatic
+                    </span>
+
+                </div>
+
+                <div class="price">
+                    ₹3,500 <small>/ day</small>
+                </div>
+
+                <button
+                    class="book-btn"
+                    onclick="openBooking('Hyundai Creta',3500)">
+
+                    Book Now
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAR 3 -->
+
+        <div class="car-card">
+
+            <img src="images/car3.jpg" alt="Mahindra Thar">
+
+            <div class="car-info">
+
+                <h3>Mahindra Thar</h3>
+
+                <p class="car-type">
+                    <i class="fa-solid fa-car"></i>
+                    SUV
+                </p>
+
+                <div class="details">
+
+                    <span>
+                        <i class="fa-solid fa-users"></i>
+                        4 Seats
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-gears"></i>
+                        Manual
+                    </span>
+
+                </div>
+
+                <div class="price">
+                    ₹4,000 <small>/ day</small>
+                </div>
+
+                <button
+                    class="book-btn"
+                    onclick="openBooking('Mahindra Thar',4000)">
+
+                    Book Now
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAR 4 -->
+
+        <div class="car-card">
+
+            <img src="images/car4.jpg" alt="BMW 5 Series">
+
+            <div class="car-info">
+
+                <h3>BMW 5 Series</h3>
+
+                <p class="car-type">
+                    <i class="fa-solid fa-car-side"></i>
+                    Luxury
+                </p>
+
+                <div class="details">
+
+                    <span>
+                        <i class="fa-solid fa-users"></i>
+                        5 Seats
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-gears"></i>
+                        Automatic
+                    </span>
+
+                </div>
+
+                <div class="price">
+                    ₹7,500 <small>/ day</small>
+                </div>
+
+                <button
+                    class="book-btn"
+                    onclick="openBooking('BMW 5 Series',7500)">
+
+                    Book Now
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BOOKINGS ================= -->
+
+<section class="booking-section" id="bookings">
+
+    <div class="booking-container">
+
+        <div>
+
+            <h2>
+                <i class="fa-solid fa-calendar-check"></i>
+                My Bookings
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>#</th>
+                        <th>Car Name</th>
+                        <th>Pick-up</th>
+                        <th>Drop-off</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="bookingTable">
+
+                    <tr>
+                        <td>1</td>
+                        <td>Toyota Corolla</td>
+                        <td>25-06-2026</td>
+                        <td>27-06-2026</td>
+                        <td>
+                            <span class="confirmed">
+                                Confirmed
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BOOKING MODAL ================= -->
+
+<div class="modal" id="bookingModal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeBooking()">
+            &times;
+        </span>
+
+        <h2>Complete Your Booking</h2>
+
+        <p id="selectedCar"></p>
+
+        <label>Your Name</label>
+
+        <input
+            type="text"
+            id="customerName"
+            placeholder="Enter your name">
+
+
+        <label>Phone Number</label>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Enter phone number">
+
+
+        <label>Pick-up Location</label>
+
+        <input
+            type="text"
+            id="modalPickup"
+            placeholder="Bengaluru">
+
+
+        <label>Pick-up Date</label>
+
+        <input type="date" id="modalPickupDate">
+
+
+        <label>Drop-off Date</label>
+
+        <input type="date" id="modalDropDate">
+
+
+        <div class="total">
+
+            Total:
+            <strong id="totalPrice">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <button
+            class="confirm-btn"
+            onclick="confirmBooking()">
+
+            Confirm Booking
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= LOGIN MODAL ================= -->
+
+<div class="modal" id="loginModal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeLogin()">
+            &times;
+        </span>
+
+        <h2>Login</h2>
+
+        <input
+            type="email"
+            placeholder="Email Address">
+
+        <input
+            type="password"
+            placeholder="Password">
+
+        <button class="confirm-btn">
+            Login
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <div class="footer-content">
+
+        <h2>
+            <i class="fa-solid fa-car"></i>
+            DriveEasy
+        </h2>
+
+        <p>
+            Your trusted car booking platform.
+        </p>
+
+        <div class="social">
+
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+
+        </div>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 DriveEasy. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
